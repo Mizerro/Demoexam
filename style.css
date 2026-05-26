@@ -1,0 +1,199 @@
+*{
+  margin:0;
+  font-family:"Rubik",sans-serif;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  background:#007BFF;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+.header{
+  background:#6C757D;
+  padding:10px 5%;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+.nav{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:1rem;
+}
+.logo{
+  font-size:clamp(1.4rem, 4vw, 1.8rem);
+  font-weight:bold;
+  color:#333;
+  text-decoration:none;
+}
+.nav-buttons{
+  display:flex;
+  gap:0.8rem;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+/*Общие стили кнопок*/
+.btn-sub,.btn-login,.btn-register,.btn-admin,.btn-create,.btn-lk,.btn-active,.btn-exit{
+  padding:0.5rem 1.2rem;
+  font-size:0.9rem;
+  border-radius:25px;
+  text-decoration:none;
+  transition:all 0.3s ease;
+  border:2px solid #4CCFE0;
+  color:black;
+  text-align:center;
+  white-space:nowrap;
+}
+.btn-sub{
+  background:#007BFF;
+  color:white;
+  border:none;
+  width:100%;
+  margin-top:10px;
+  padding:0.75rem;
+  border-radius:8px;
+}
+.btn-active{background:#f2e9d5;}
+.btn-exit{
+  background:#FF6347;
+  border:2px solid black;
+}
+.btn-login:hover,.btn-register:hover,.btn-admin:hover,.btn-create:hover,.btn-lk:hover{
+  background:#4CCFE0;
+}
+/*Основные контейнеры*/
+.container{
+  width:90%;
+  max-width:700px;
+  margin:0 auto;
+  padding:1.5rem 1rem;
+}
+.admin-card,.booking-card{
+  background:#4CCFE0;
+  border-radius:15px;
+  box-shadow:5px 5px 15px rgba(0,0,0,0.1);
+  padding:1.5rem;
+  margin-bottom:1.5rem;
+}
+.admin-header,.booking-header{
+  text-align:center;
+  margin-bottom:1.5rem;
+}
+.request-card{
+  background:#FFFFFF;
+  border-radius:10px;
+  padding:1.2rem;
+  margin-bottom:1.2rem;
+}
+/*Формы*/
+.body-form{
+  background:#007BFF;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:1rem;
+}
+.login-container,.register-container{
+  background:#4CCFE0;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  padding:1.5rem;
+  width:100%;
+  max-width:90%;
+  margin:1rem auto;
+}
+/*Поля ввода*/
+label,b{
+  display:block;
+  margin:0.75rem 0 0.5rem;
+  font-size:0.95rem;
+}
+input,select{
+  width:100%;
+  padding:0.75rem;
+  border:2px solid #e1e1e1;
+  border-radius:8px;
+  font-size:1rem;
+  transition:border-color 0.3s ease;
+}
+input:focus,select:focus{
+  outline:none;
+  border-color:#667eea;
+}
+/*Ссылки*/
+.index-link,.login-link,.register-link{
+  text-decoration:none;
+  color:#666;
+  transition:0.1s ease;
+  font-size:0.95rem;
+}
+.login-link,.register-link{color:#667eea;}
+.index-link:hover,.login-link:hover,.register-link:hover{color:#5a6fd8;}
+/*Текст*/
+.body-form p,.body-form h1{
+  margin-top:10px;
+  text-align:center;
+}
+.body-form h1{
+  font-size:clamp(1.5rem, 5vw, 2rem);
+}
+.no-requests{
+  text-align:center;
+  padding:2rem 1rem;
+  color:#666;
+  font-size:1.1rem;
+}
+@media (max-width:480px){
+  .nav{
+    flex-direction:column;
+    text-align:center;
+  }
+  .nav-buttons{
+    justify-content:center;
+    width:100%;
+  }
+  .no-requests{
+    padding:3rem;
+  }
+  .admin-card,.booking-card{
+    padding:2rem;
+    margin-bottom:2rem;
+  }
+  .container{
+    padding:2rem;
+  }
+  .request-card{
+    padding:1.5rem;
+    margin-bottom:1.5rem;
+  }
+  .btn-sub,.btn-login,.btn-register,.btn-admin,.btn-create,.btn-lk,.btn-active,.btn-exit{
+    padding:0.4rem 1rem;
+    font-size:0.85rem;
+  }
+  .login-container,.register-container{
+    padding:2rem;
+    max-width:400px;
+  }
+  .register-container{
+    max-width:500px;
+  }
+  input,select{
+    padding:0.65rem;
+    font-size:0.95rem;
+  }
+  .header{
+    padding:10px 3%;
+  } 
+  .nav-buttons{
+    gap:0.5rem;
+  }
+  .admin-card,.booking-card{
+    border-radius:12px;
+    padding:1.2rem;
+  }
+}
